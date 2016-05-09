@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>top - rtl (C:/Users/student/Desktop/JOVANA/VGA-MOVING TXT&amp;SHAPE1/top.vhd)</SelectedItem>
+         <SelectedItem>top - rtl (C:/materija/Ra175-2013/LPRS2/Tetris_Upgrade/E2LP_Text_Mode_Tetris/VGA-MOVING TXT&amp;SHAPE1/top.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000176000000020000000000000000000000000200000064ffffffff000000810000000300000002000001760000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>top - rtl (C:/Users/student/Desktop/JOVANA/VGA-MOVING TXT&amp;SHAPE1/top.vhd)</CurrentItem>
+      <CurrentItem>top - rtl (C:/materija/Ra175-2013/LPRS2/Tetris_Upgrade/E2LP_Text_Mode_Tetris/VGA-MOVING TXT&amp;SHAPE1/top.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -64,13 +64,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000167000000010000000100000000000000000000000064ffffffff000000810000000000000001000001670000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000187000000010000000100000000000000000000000064ffffffff000000810000000000000001000001870000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
