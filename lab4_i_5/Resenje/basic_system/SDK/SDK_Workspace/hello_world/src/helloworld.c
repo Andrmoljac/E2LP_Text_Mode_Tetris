@@ -70,7 +70,7 @@ void set_cursor(Xuint32 new_value)
 
 void print(char *str);
 
-void draw_rot_square(Xuint32 BaseAddress, int pocetakR, int krajR, int pocetakK, int krajK)
+/*void draw_rot_square(Xuint32 BaseAddress, int pocetakR, int krajR, int pocetakK, int krajK)
 {
 	int i, j, k;
 
@@ -89,7 +89,7 @@ void draw_rot_square(Xuint32 BaseAddress, int pocetakR, int krajR, int pocetakK,
 			}
 		}
 	}
-}
+}*/
 
 void clear_text_screen(Xuint32 BaseAddress)
 {
@@ -111,7 +111,7 @@ void print_string(Xuint32 BaseAddress, unsigned char string_s[], int lenght)
 	}
 }
 
-void clear_graphics_screen(Xuint32 BaseAddress)
+/*void clear_graphics_screen(Xuint32 BaseAddress)
 {
 	int i;
 
@@ -119,9 +119,9 @@ void clear_graphics_screen(Xuint32 BaseAddress)
 	{
 		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
 	}
-}
+}*/
 
-void draw_square(Xuint32 BaseAddress)
+/*void draw_square(Xuint32 BaseAddress)
 {
 	int i, j, k;
 
@@ -141,9 +141,9 @@ void draw_square(Xuint32 BaseAddress)
 			}
 		}
 	}
-}
+}*/
 
-void pomeraj_kvadrat(Xuint32 BaseAddress, int row, int offset, unsigned char* str)
+/*void pomeraj_kvadrat(Xuint32 BaseAddress, int row, int offset, unsigned char* str)
 {
 	int i, j;
 
@@ -157,7 +157,7 @@ void pomeraj_kvadrat(Xuint32 BaseAddress, int row, int offset, unsigned char* st
 	//}
 
 
-}
+}*/
 
 void print_side_string(Xuint32 BaseAddress, int cursor_position)
 {
@@ -180,11 +180,11 @@ void print_score_string(Xuint32 BaseAddress, int cursor_position)
 	char r = 'R';
 	char e = 'E';
 
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position, s);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (cursor_position + 4), (c));
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (cursor_position + 8), (o));
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (cursor_position + 12), (r));
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (cursor_position + 16), (e));
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position, s);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (cursor_position + 4), (c));
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (cursor_position + 8), (o));
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (cursor_position + 12), (r));
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (cursor_position + 16), (e));
 
 }
 void print_NUMSCORE_string(Xuint32 BaseAddress,int *CheckScore,int *Deca)
@@ -202,60 +202,51 @@ void print_NUMSCORE_string(Xuint32 BaseAddress,int *CheckScore,int *Deca)
 	}
 	else
 		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 650, (48+deca));
+
 	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 654, (48+score));
 }
 void print_tetris_string(Xuint32 BaseAddress)
 {
-	    char z = 'Z';
-		char e = 'E';
-		char m = 'M';
-		char o = 'O';
-		char t = 'T';
-		char r = 'R';
-		char i = 'I';
-		char s = 'S';
-		char k = 'K';
+	char e = 'E';
+	char t = 'T';
+	char r = 'R';
+	char i = 'I';
+	char s = 'S';
+	char k = 'K';
 
-		char z1 = '(';
-		char z2 = ')';
-		char c = 'C';
-		char line = '-';
-		char n1 = '2';
-		char n2 = '0';
-		char n3 = '1';
-		char n4 = '6';
+	char z1 = '(';
+	char z2 = ')';
+	char c = 'C';
+	char line = '-';
+	char n1 = '2';
+	char n2 = '0';
+	char n3 = '1';
+	char n4 = '6';
 
 
-
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 105, z1);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 109, c);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 113, z2);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 121, r);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 125, t);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 129, line);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 133, r);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 137, k);
-
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 117 + 320, n1);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 121 + 320, n2);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 125 + 320, n3);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 129 + 320, n4);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 105, z1);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 109, c);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 113, z2);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 121, r);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 125, t);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 129, line);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 133, r);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 137, k);
 
 
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2185, z);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2185 + 8), e);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2185 + 16), m);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2185 + 24), o);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 117 + 320, n1);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 121 + 320, n2);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 125 + 320, n3);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 129 + 320, n4);
 
 
-
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320), t);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 8), e);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 16), t);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 24), r);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 32), i);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 40), s);
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 48), n1);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320), t);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 8), e);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 16), t);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 24), r);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 32), i);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 40), s);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (2178 + 320 + 48), n1);
 
 }
 void print_gameover_string(Xuint32 BaseAddress)
@@ -269,36 +260,54 @@ void print_gameover_string(Xuint32 BaseAddress)
 	char r = 'R';
 
 
-	        VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275, g);
-			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 16, a);
-			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 32, m);
-			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 48, e);
-			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 320 + 48, o);
-			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 320 + 64, v);
-			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 320 + 80, e);
-			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 320 + 96, r);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275, g);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 16, a);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 32, m);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 48, e);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 320 + 48, o);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 320 + 64, v);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 320 + 80, e);
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + 2275 + 320 + 96, r);
 
 
 
 }
 
-void print_rot_string(Xuint32 BaseAddress, unsigned char string_s[], int lenght, int cursor_position,int matrix[][10], int columnFree[10])
+void print_blocks(Xuint32 BaseAddress, unsigned char string_s[], int lenght, int cursor_position)
 {
-	int i,j,a;
 	int t;
-	//unsigned char SCC[2];
 
-	int matrixTemp[30][10];
+	//primer crtanje z ili t
+	//prosiriti da prima kao parametre gde crta sta, ono +-5 +-160
 	for (t = 0; t < lenght; t++)
 	{
 		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position + t*1, (string_s[t] - 0x40));
 	}
 
+	for (t = 0; t < lenght; t++)
+	{
+		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF - 160 + cursor_position + t*1, (string_s[t] - 0x40));
+	}
 
+	for (t = 0; t < lenght; t++)
+	{
+		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position + t*1 + 5, (string_s[t] - 0x40));
+	}
+
+	for (t = 0; t < lenght; t++)
+	{
+		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position - 5 + t*1, (string_s[t] - 0x40));
+	}
+}
+
+void move_blocks(int matrix[][10], int columnFree[10])
+{
+	int i, j;
+	int matrixTemp[30][10];
 
 	if(matrix[29][0] == 1 && matrix[29][1] == 1 && matrix[29][2] == 1 &&
-			matrix[29][3] == 1 && matrix[29][4] == 1 && matrix[29][5] == 1
-		&& matrix[29][6] == 1 && matrix[29][7] == 1 && matrix[29][8] == 1 && matrix[29][9] == 1)
+				matrix[29][3] == 1 && matrix[29][4] == 1 && matrix[29][5] == 1
+			&& matrix[29][6] == 1 && matrix[29][7] == 1 && matrix[29][8] == 1 && matrix[29][9] == 1)
 	{
 
 		for(j = 0; j < 10; j++)
@@ -307,35 +316,54 @@ void print_rot_string(Xuint32 BaseAddress, unsigned char string_s[], int lenght,
 			columnFree[j]++;
 		}
 
+
 		for(i = 0; i < 29; i++)
 			for(j = 0; j < 10; j++)
 			{
-
 				matrixTemp[i+1][j] = matrix[i][j];
 			}
 
-		for(i = 0; i < 30; i++)
-				for(j = 0; j < 10; j++)
-					matrix[i][j] = matrixTemp[i][j];
 
+		for(i = 0; i < 30; i++)
+			for(j = 0; j < 10; j++)
+				matrix[i][j] = matrixTemp[i][j];
 
 	}
+}
 
-
-
-
+void save_blocks(Xuint32 BaseAddress, unsigned char string_s[], int lenght, int matrix[][10])
+{
+	int i, j, a;
+	int t = lenght;
 
 	for(i = 0; i < 30; i++)
-		for(j = 0; j < 10; j++)
-		{
-			if(matrix[i][j] == 1)
+			for(j = 0; j < 10; j++)
 			{
-				for (a = 0; a < lenght; a++)
+				if(matrix[i][j] == 1)
 				{
-					VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (i*160 + j*4 + a)+40, (string_s[t] - 0x40));
+					for (a = 0; a < lenght; a++)
+					{
+						VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + (i*160 + j*4 + a)+40, (string_s[t] - 0x40));
+					}
+
+					for (a = 0; a < lenght; a++)
+					{
+						VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF - 160 + (i*160 + j*4 + a)+40, (string_s[t] - 0x40));
+					}
 				}
 			}
-		}
+}
+
+void print_rot_string(Xuint32 BaseAddress, unsigned char string_s[], int lenght, int cursor_position,int matrix[][10], int columnFree[10])
+{
+
+	print_blocks(BaseAddress, string_s, lenght, cursor_position);
+
+
+	move_blocks(matrix, columnFree);
+
+
+	save_blocks(BaseAddress, string_s, lenght, matrix);
 
 }
 
@@ -484,7 +512,7 @@ int main()
 						matrix[columnFree[currentColumn]][currentColumn] = 1;
 						if(checkLastRow(matrix)) CheckScore++;
 						columnFree[currentColumn]--;
-						print_rot_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, s, length, cursor_position,matrix,columnFree);
+						print_rot_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, s, length, cursor_position, matrix, columnFree);
 
 						start = 0;
 						cursor_position = 56;
